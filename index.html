@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leo Giorno – UGC creator</title>
+<meta name="description" content="Leo Giorno – UGC creator and Social Media Specialist based in Milan.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&amp;family=Inter+Tight:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}a:hover{color:#B4532A}
+button{font:inherit;cursor:pointer}
+video{display:block}
+.w{max-width:1280px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
+.sec{padding-top:104px;padding-bottom:104px}
+.hd{font-family:'Shadows Into Light',cursive;line-height:1.15}
+.logo{font-size:34px}.hm{font-size:24px}.hl{font-size:32px}.hxl{font-size:44px}
+.h1{font-size:clamp(34px,6.5vw,92px);line-height:0.98;font-weight:500;letter-spacing:-0.04em}
+.h2{font-size:56px;font-weight:500;letter-spacing:-0.03em;line-height:1}
+.nav{display:flex;flex-wrap:wrap;gap:28px;font-size:14px;letter-spacing:0.06em;text-transform:uppercase}
+.hero{position:relative;height:640px;border-radius:24px;overflow:hidden;background:#B5532C}
+.hero-in{padding:40px}
+.vd{display:block}.vm{display:none}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.strip{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:4px 0}
+.strip::-webkit-scrollbar{display:none}
+.slide{flex:0 0 270px;margin:0}
+.slide-s{flex:0 0 170px;margin:0}
+.bleed{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:max(40px,calc(50vw - 600px))}
+.card-strip{margin-top:32px;margin-left:-48px;margin-right:-48px;padding-left:48px}
+.cap{padding:40px 16px 14px}
+.card{padding:44px 48px}
+.card-t{font-size:40px}
+.portrait{height:480px}
+.about-t{font-size:30px}
+.mail{font-size:clamp(22px,5.5vw,80px);overflow-wrap:anywhere}
+.cta{white-space:nowrap}
+#reels,#colours{scroll-margin-top:8px}
+.collage{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:88px;gap:12px}
+.ph{position:relative;margin:0;border-radius:14px;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph-cap{position:absolute;left:14px;bottom:10px;color:#FFF8EE;font-size:22px}
+.note{display:flex;align-items:center;justify-content:center;padding:20px;text-align:center;background:#F2C9A0;color:#7A3B2A;font-size:28px;line-height:1.15;border-radius:14px}
+.p1{grid-column:1/8;grid-row:1/5}.p2{grid-column:8/11;grid-row:1/6}.p3{grid-column:11/13;grid-row:1/3}.p4{grid-column:11/13;grid-row:3/6}
+.empty{display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;box-sizing:border-box;background:#EFE3D3;border:2px dashed #CDB9A3;color:#7A5E4A;font-size:13px;line-height:1.3}
+.p5{grid-column:1/4;grid-row:5/9}.p6{grid-column:4/8;grid-row:5/9}.p7{grid-column:8/13;grid-row:6/9}
+.cc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cc{margin:0}
+.cc-box{position:relative;border-radius:14px;overflow:hidden;background:#EFE3D3}
+.cc-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cc-track::-webkit-scrollbar{display:none}
+.cc-track img,.cc-track video{flex:0 0 100%;width:100%;aspect-ratio:4/5;object-fit:cover;display:block;scroll-snap-align:start}
+.cc-btn{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border:0;border-radius:999px;background:rgba(255,248,238,0.88);color:#221A15;font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;padding:0 0 3px}
+.cc-prev{left:10px}.cc-next{right:10px}
+.shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(23,19,15,0.7),rgba(23,19,15,0.3) 40%,rgba(23,19,15,0) 75%)}
+.rt{font-size:22px}
+.cc-cap{font-size:24px}
+.meta-t{font-size:18px}
+.dest-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:300px;gap:12px}
+.dest{position:relative;border:0;border-radius:16px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;color:#FFF8EE;overflow:hidden}
+.dest-wide{grid-column:span 2}
+.dest-full{grid-column:1/-1}
+.dest-big{grid-column:span 2;grid-row:span 2}
+.dest-grid{grid-auto-flow:dense}
+.dest-name,.dest-line{position:relative}
+.ch-strip{display:flex;gap:10px;overflow-x:auto;height:360px;margin-top:16px;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+.ch-strip figure{height:100%;flex:0 0 auto}
+.chapter{margin-top:32px;padding-top:24px;border-top:1px solid #E2D2BF}
+.chapter-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+.chapter-grid-wide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.chapter-grid-5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:20px}
+.chapter-flat>p{display:none}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.dest-name{font-size:42px;line-height:1;color:#F5C842}
+.dest-line{font-size:14px;margin-top:6px}
+.story{margin-top:20px;padding:32px;background:#FFFAF3;border:1px solid #E2D2BF;border-radius:20px;scroll-margin-top:20px}
+.story-reels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:24px}
+.story-reels.three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:860px}
+.story-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px}
+@media (max-width:760px){
+.w{padding-left:20px;padding-right:20px}
+.sec{padding-top:64px;padding-bottom:64px}
+.logo{font-size:30px}.hm{font-size:20px}.hl{font-size:26px}.hxl{font-size:32px}
+.h2{font-size:38px}
+.nav{gap:6px 16px;font-size:12px}
+.hero{height:auto;aspect-ratio:9/16;border-radius:18px}
+.hero-in{padding:22px}
+.vd{display:none}.vm{display:block}
+.filters{flex-wrap:nowrap;overflow-x:auto;margin-left:-20px;margin-right:-20px;padding:0 20px 6px}
+.filters button{flex:0 0 auto}
+.strip{gap:10px}
+.slide{flex-basis:46vw}
+.slide-s{flex-basis:34vw}
+.bleed{padding-left:20px}
+.card-strip{margin-left:-24px;margin-right:-24px;padding-left:24px;margin-top:24px}
+.cap{padding:28px 10px 10px}
+.card{padding:28px 24px}
+.card-t{font-size:30px}
+.portrait{height:380px}
+.about-t{font-size:22px}
+.cta{font-size:clamp(18px,6.6vw,32px)}
+.collage{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:110px;gap:8px}
+.ph-cap{left:10px;bottom:6px;font-size:18px}
+.note{font-size:21px;padding:12px}
+.p1{grid-column:1/3;grid-row:1/3}.p2{grid-column:1/2;grid-row:3/6}.p3{grid-column:2/3;grid-row:3/4}.p4{grid-column:2/3;grid-row:4/6}
+.p5{grid-column:1/2;grid-row:6/8}.p6{grid-column:2/3;grid-row:6/8}.p7{grid-column:1/3;grid-row:8/10}
+.cc-grid{grid-template-columns:minmax(0,1fr);gap:20px}
+.dest-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:200px;gap:8px}
+.dest{padding:14px}
+.dest-name{font-size:22px}
+.dest-line{font-size:11px;margin-top:4px}
+.rt{font-size:16px}
+.cc-cap{font-size:19px}
+.meta-t{font-size:14px}
+.story{padding:20px}
+.story-reels{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.story-reels.three{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ch-strip{height:260px;gap:8px}
+.chapter-grid-wide{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.chapter-grid-5{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.grid-2{grid-template-columns:minmax(0,1fr);gap:8px;margin-top:8px}
+.grid-3{gap:6px;margin-top:8px}
+.story-photos{grid-template-columns:minmax(0,1fr);gap:8px}
+}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-tpl">
+
+<div style="background: #F6EFE6; color: #221A15; font-family: 'Inter Tight', system-ui, sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden">
+
+<header class="w" style="padding-top: 20px; padding-bottom: 20px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center">
+<a href="#top" class="hd logo" style="color: #B4532A; text-decoration: none; line-height: 1">@leogiorno</a>
+<nav aria-label="Main" class="nav">
+<a href="#reels" style="text-decoration: none">Reels</a>
+<a href="#colours" style="text-decoration: none">Vita lenta</a>
+<a href="work.html" style="text-decoration: none">Brand work ↗</a>
+<a href="#contact" style="text-decoration: none">Contact</a>
+</nav>
+</header>
+
+<section id="about" class="w" style="padding-top: 24px; padding-bottom: 56px; display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: center">
+<figure style="margin: 0; flex: 1 1 420px; aspect-ratio: 16 / 9; background: #B88A66; border-radius: 20px; overflow: hidden"><video src="media/f0180b9f0d16ded3e6c46e634c81234f.mp4" poster="media/da37cea61c1ab86bc64b36ce564add50.jpg" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover"></video></figure>
+<div style="flex: 1 1 300px">
+<p class="hd hl" style="margin: 0; color: #B4532A">ciao, I’m leo</p>
+<p class="about-t" style="margin: 8px 0 0; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em">Based in Milan. I share what I see with my own eyes, and I help brands do the same.</p>
+</div>
+</section>
+
+<section id="top" class="w" style="padding-top: 4px">
+<div class="hero">
+<sc-if value="{{ hasHeroD }}" hint-placeholder-val="{{ false }}">
+<video class="vd" src="{{ heroD }}" autoplay="" muted="" loop="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+</sc-if>
+<sc-if value="{{ hasHeroM }}" hint-placeholder-val="{{ false }}">
+<video class="vm" src="{{ heroM }}" autoplay="" muted="" loop="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+</sc-if>
+<div class="hero-in" style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; background: linear-gradient(to top, rgba(23, 19, 15, 0.6), rgba(23, 19, 15, 0) 60%)">
+<span></span>
+<div>
+<p class="hd hxl" style="margin: 0 0 6px; color: #F5C842">chasing sunsets, slowly</p>
+<h1 class="h1" style="margin: 0; max-width: 880px; color: #FFF8EE">UGC creator for places worth slowing down for.</h1>
+</div>
+</div>
+</div>
+</section>
+
+<section id="reels" class="w sec">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 28px">
+<div>
+<p class="hd hl" style="margin: 0; color: #B4532A">daily moments</p>
+<h2 class="h2" style="margin: 0">What I love to film</h2>
+</div>
+<div role="group" aria-label="Filter reels" class="filters">
+<sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+<button type="button" class="hd hm" onClick="{{ f.pick }}" aria-pressed="{{ f.pressed }}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; line-height: 1; white-space: nowrap; {{ f.st }}">{{ f.label }}</button>
+</sc-for>
+</div>
+</div>
+<div class="strip bleed" data-strip="reels" onTouchStart="{{ hold }}" onTouchMove="{{ hold }}" onTouchEnd="{{ hold }}" onPointerDown="{{ hold }}" onWheel="{{ hold }}" aria-label="Reels, scrolling automatically">
+<sc-for list="{{ loop }}" as="r" hint-placeholder-count="8">
+<figure class="slide" style="position: relative; border-radius: 14px; overflow: hidden">
+<div style="aspect-ratio: 9 / 16; background: {{ r.color }}">
+<sc-if value="{{ r.hasVideo }}" hint-placeholder-val="{{ false }}">
+<video src="{{ r.src }}" poster="{{ r.poster }}" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover"></video>
+</sc-if>
+</div>
+<span class="shade" aria-hidden="true"></span>
+<figcaption class="cap" style="position: absolute; left: 0; right: 0; bottom: 0; color: #FFF8EE">
+<span class="hd rt" style="display: block; line-height: 1.1; color: #F5C842">{{ r.title }}</span>
+<span style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase">{{ r.catLabel }}</span>
+</figcaption>
+</figure>
+</sc-for>
+</div>
+</section>
+
+<section id="stills" class="w" style="padding-bottom: 104px">
+<div style="margin-bottom: 28px">
+<p class="hd hl" style="margin: 0; color: #B4532A">something about color orange</p>
+<h2 class="h2" style="margin: 0">What I love to capture</h2>
+</div>
+<div class="collage">
+<figure class="ph p1" style="background: #E08A4F"><video src="media/e1ad68aa8f38d0316a0ecf23ef6fc269.mp4" poster="media/5b0001e1b7b03bc1b32822c5d1976163.jpg" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover; display: block"></video></figure>
+<figure class="ph p2" style="background: #8C4A2F"><video src="media/ccabe9e15f82956d58116b110eae2652.mp4" poster="media/499cfea66297b31a2dfbbbf5aea2f351.jpg" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover; display: block"></video></figure>
+<figure class="ph p3" style="background: #B85A34"><video src="media/38fafed5a5d4e0abc4d3d70fa7bd2c37.mp4" poster="media/4dea703671f2e222d035b5068fb3b459.jpg" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover; object-position: 45% 70%; display: block"></video></figure>
+<figure class="ph p4" style="background: #D9A27E"><video src="media/08de9cc57f628428c872889c8695667c.mp4" poster="media/b83e79820e53007df9d228c8d74e60f9.jpg" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover; display: block"></video></figure>
+<figure class="ph p5" style="background: #3A302A"><video src="media/a3cc64d6a5e2e5a1546dfd78f68b9df5.mp4" poster="media/9b54121defe1da530eccb10befb51364.jpg" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover; display: block"></video></figure>
+<figure class="ph p6" style="background: #C9693E"><video src="media/95dc5e1e45cb8f9c9baf2e9832e64173.mp4" poster="media/ed532814bcd9d5f029d621e28c510f61.jpg" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover; display: block"></video></figure>
+<figure class="ph p7" style="background: #D9A27E"><video src="media/40c8a9ef09fc2129cae6acfaa7a6df83.mp4" poster="media/5ac28025419281aaf07aa3561dae2d30.jpg" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover; display: block"></video></figure>
+</div>
+</section>
+
+<section id="colours" class="w" style="padding-bottom: 104px">
+<div style="margin-bottom: 28px">
+<p class="hd hl" style="margin: 0; color: #B4532A">collecting colours</p>
+<h2 class="h2" style="margin: 0">Stories in frames</h2>
+</div>
+<div class="cc-grid">
+<sc-for list="{{ carousels }}" as="k" hint-placeholder-count="3">
+<figure class="cc">
+<div class="cc-box">
+<div class="cc-track" data-cc="{{ k.id }}">
+<sc-for list="{{ k.slides }}" as="s" hint-placeholder-count="3">
+<sc-if value="{{ s.isImg }}" hint-placeholder-val="{{ true }}">
+<img src="{{ s.src }}" alt="" loading="lazy">
+</sc-if>
+<sc-if value="{{ s.isVid }}" hint-placeholder-val="{{ false }}">
+<video src="{{ s.src }}" poster="{{ s.poster }}" autoplay="" muted="" loop="" playsinline="" preload="metadata"></video>
+</sc-if>
+</sc-for>
+</div>
+<button type="button" class="cc-btn cc-prev" onClick="{{ k.prev }}" aria-label="Previous photo">‹</button>
+<button type="button" class="cc-btn cc-next" onClick="{{ k.next }}" aria-label="Next photo">›</button>
+</div>
+<figcaption class="hd cc-cap" style="margin-top: 8px; color: #221A15">{{ k.title }}</figcaption>
+</figure>
+</sc-for>
+</div>
+</section>
+
+<section id="destinations" class="w" style="padding-bottom: 104px">
+<div style="margin-bottom: 28px">
+<p class="hd hl" style="margin: 0; color: #B4532A">vita lenta</p>
+<h2 class="h2" style="margin: 0">Some places, but slowly</h2>
+
+</div>
+<div class="dest-grid">
+<sc-for list="{{ dests }}" as="d" hint-placeholder-count="7">
+<button type="button" class="{{ d.cls }}" onClick="{{ d.pick }}" aria-expanded="{{ d.open }}" style="background: linear-gradient(to top, rgba(23, 19, 15, 0.5), rgba(23, 19, 15, 0) 60%), {{ d.color }}; {{ d.ring }}">
+<sc-if value="{{ d.hasCover }}" hint-placeholder-val="{{ false }}">
+<sc-if value="{{ d.hasVid }}" hint-placeholder-val="{{ false }}">
+<video src="{{ d.coverVid }}" poster="{{ d.coverPoster }}" autoplay="" muted="" loop="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video>
+</sc-if>
+<sc-if value="{{ d.noVid }}" hint-placeholder-val="{{ false }}">
+<img src="{{ d.cover }}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+</sc-if>
+<span class="shade" aria-hidden="true"></span>
+</sc-if>
+<span class="hd dest-name">{{ d.name }}</span>
+<span class="dest-line">{{ d.line }}</span>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{ hasDest }}" hint-placeholder-val="{{ false }}">
+<div id="dest-story" class="story">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-start">
+<div style="flex: 1 1 260px">
+<p class="hd hxl" style="margin: 0; color: #B4532A">{{ cur.name }}</p>
+<p style="margin: 4px 0 0; color: #5A4C42; font-size: 16px; max-width: 560px">{{ cur.text }}</p>
+</div>
+<button type="button" onClick="{{ closeDest }}" style="min-height: 44px; padding: 0 18px; background: transparent; border: 1px solid #CDB9A3; border-radius: 999px; color: #221A15; font-size: 14px">Close ×</button>
+</div>
+<sc-if value="{{ hasLead }}" hint-placeholder-val="{{ false }}">
+<figure style="margin: 24px 0 0; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #B85A34">
+<video src="{{ lead.src }}" poster="{{ lead.poster }}" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover"></video>
+</figure>
+</sc-if>
+<div class="{{ reelsCls }}">
+<sc-for list="{{ storyReels }}" as="s" hint-placeholder-count="4">
+<figure style="margin: 0; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background: {{ s.color }}">
+<sc-if value="{{ s.hasVideo }}" hint-placeholder-val="{{ false }}">
+<video src="{{ s.src }}" poster="{{ s.poster }}" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover"></video>
+</sc-if>
+</figure>
+</sc-for>
+</div>
+<div class="story-photos">
+<sc-for list="{{ storyPhotos }}" as="s" hint-placeholder-count="2">
+<figure style="margin: 0; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: {{ s.color }}">
+<sc-if value="{{ s.hasVideo }}" hint-placeholder-val="{{ false }}">
+<video src="{{ s.src }}" poster="{{ s.poster }}" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover"></video>
+</sc-if>
+</figure>
+</sc-for>
+</div>
+<sc-for list="{{ chapters }}" as="ch" hint-placeholder-count="1">
+<div class="{{ ch.cls }}">
+<p class="hd hl" style="margin: 0; color: #B4532A">{{ ch.title }}</p>
+<p style="margin: 4px 0 0; color: #5A4C42; font-size: 16px; max-width: 560px">{{ ch.text }}</p>
+<div class="{{ ch.grid }}">
+<sc-for list="{{ ch.items }}" as="c" hint-placeholder-count="6">
+<figure style="margin: 0; aspect-ratio: {{ c.ratio }}; border-radius: 12px; overflow: hidden; background: #C4562E">
+<sc-if value="{{ c.isVideo }}" hint-placeholder-val="{{ false }}">
+<video src="{{ c.src }}" poster="{{ c.poster }}" autoplay="" muted="" loop="" playsinline="" style="width: 100%; height: 100%; object-fit: cover"></video>
+</sc-if>
+<sc-if value="{{ c.isImg }}" hint-placeholder-val="{{ false }}">
+<img src="{{ c.src }}" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</sc-if>
+</figure>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+</section>
+
+<section aria-label="What I create" style="background: #EFE3D3">
+<div class="w sec">
+<p class="hd hl" style="margin: 0; color: #B4532A">for brands and places</p>
+<h2 class="h2" style="margin: 0 0 32px">What I create</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 240px; padding: 24px; background: #FFFAF3; border: 1px solid #E2D2BF; border-radius: 16px"><p style="margin: 0 0 6px; font-size: 20px; font-weight: 500">UGC videos</p><p style="margin: 0; color: #5A4C42; font-size: 15px">Vertical videos with hook, voiceover or on-screen text.</p></div>
+<div style="flex: 1 1 240px; padding: 24px; background: #FFFAF3; border: 1px solid #E2D2BF; border-radius: 16px"><p style="margin: 0 0 6px; font-size: 20px; font-weight: 500">Stay &amp; venue stories</p><p style="margin: 0; color: #5A4C42; font-size: 15px">Rooms, tables and views, told through light and small details.</p></div>
+<div style="flex: 1 1 240px; padding: 24px; background: #FFFAF3; border: 1px solid #E2D2BF; border-radius: 16px"><p style="margin: 0 0 6px; font-size: 20px; font-weight: 500">Photography</p><p style="margin: 0; color: #5A4C42; font-size: 15px">Stills for feed, carousels and ads.</p></div>
+<div style="flex: 1 1 240px; padding: 24px; background: #FFFAF3; border: 1px solid #E2D2BF; border-radius: 16px"><p style="margin: 0 0 6px; font-size: 20px; font-weight: 500">Concept &amp; edit</p><p style="margin: 0; color: #5A4C42; font-size: 15px">From idea to a ready-to-post file.</p></div>
+</div>
+</div>
+</section>
+
+<section aria-label="Brand and social work" class="w" style="padding-top: 64px">
+<div class="card" style="background: #17130F; color: #F3EBDD; border-radius: 24px; overflow: hidden">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center">
+<div style="flex: 1 1 280px">
+<p class="hd hl" style="margin: 0; color: #F5C842">another chapter</p>
+<p class="card-t" style="margin: 4px 0 0; font-weight: 500; letter-spacing: -0.03em; line-height: 1.05">Brand &amp; social work</p>
+<p style="margin: 10px 0 0; max-width: 560px; color: #B9AC9C; font-size: 16px">Event coverage, trend edits and social content for brands.</p>
+</div>
+<a href="work.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; background: #F5C842; color: #17130F; border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none">See the work →</a>
+</div>
+</div>
+</section>
+
+<footer id="contact" style="background: #EFE3D3">
+<div class="w sec" style="padding-bottom: 48px">
+<p class="hd hxl cta" style="margin: 0; color: #B4532A">let’s create something together</p>
+<a href="mailto:giornoleonardo@gmail.com" class="mail" style="display: block; margin-top: 8px; line-height: 1.05; font-weight: 500; letter-spacing: -0.04em; text-decoration: none">giornoleonardo@gmail.com</a>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 32px; margin-top: 48px; padding-top: 24px; border-top: 1px solid #CDB9A3; font-size: 15px"><a href="https://www.instagram.com/leogiorno/">Instagram</a><a href="https://www.linkedin.com/in/leonardo-giorno-124757246/">LinkedIn</a></div>
+</div>
+</footer>
+
+</div>
+</template>
+<script>window.__MEDIA={"9c232ccf275aad6ecb1e6f7ff2a538d6": "media/9c232ccf275aad6ecb1e6f7ff2a538d6.mp4", "78ae24499cac5d4dabdbb3064ee20411": "media/78ae24499cac5d4dabdbb3064ee20411.mp4", "e43c3ee5e935aa23f0fb7006e805f01e": "media/e43c3ee5e935aa23f0fb7006e805f01e.jpg", "3adf3f0044e9c009b55295462df020e4": "media/3adf3f0044e9c009b55295462df020e4.mp4", "ee9f13f21dae200a7f8d31ca4246561d": "media/ee9f13f21dae200a7f8d31ca4246561d.jpg", "cb4f3c8edceab3ab8423adc4d7e75435": "media/cb4f3c8edceab3ab8423adc4d7e75435.mp4", "e0391e32545aa2ed2d7eeab8eb8d2623": "media/e0391e32545aa2ed2d7eeab8eb8d2623.jpg", "f200167893d6ee0d1b8a5a1d0c2230c3": "media/f200167893d6ee0d1b8a5a1d0c2230c3.mp4", "f0180b9f0d16ded3e6c46e634c81234f": "media/f0180b9f0d16ded3e6c46e634c81234f.mp4", "5a58028b9a7d4ee75bc0077ca231e401": "media/5a58028b9a7d4ee75bc0077ca231e401.jpg", "cbfa469627f194febc1e593e95522727": "media/cbfa469627f194febc1e593e95522727.mp4", "f20f81d771c1cea47d6036a3dd09755a": "media/f20f81d771c1cea47d6036a3dd09755a.mp4", "f1da560274e0a3d45575b7eb395bfa5b": "media/f1da560274e0a3d45575b7eb395bfa5b.jpg", "a809d11e91ac55ba156c4018087950e4": "media/a809d11e91ac55ba156c4018087950e4.mp4", "b984497a5dfb52a3cfffae0b059c6cad": "media/b984497a5dfb52a3cfffae0b059c6cad.jpg", "d0f3db0f812a988985acfba559978aee": "media/d0f3db0f812a988985acfba559978aee.mp4", "67c37baa46c491e89ad854fc035a4cad": "media/67c37baa46c491e89ad854fc035a4cad.mp4", "22f0ad2ac60bdfa4c3b5f7709c2a1ee6": "media/22f0ad2ac60bdfa4c3b5f7709c2a1ee6.mp4", "fbbb0a77446d99a8ffe6f8e181d5b3fb": "media/fbbb0a77446d99a8ffe6f8e181d5b3fb.mp4", "5e77b67b6d7f50c1ccb53ce7ff4b188b": "media/5e77b67b6d7f50c1ccb53ce7ff4b188b.mp4", "a7843cda757be2e69acd7411509ca81f": "media/a7843cda757be2e69acd7411509ca81f.mp4", "b83e79820e53007df9d228c8d74e60f9": "media/b83e79820e53007df9d228c8d74e60f9.jpg", "960dd3bbc6cdda6fd5c2767d25a07ea5": "media/960dd3bbc6cdda6fd5c2767d25a07ea5.jpg", "ad84fc2ce0d4ba9cd869787020fab034": "media/ad84fc2ce0d4ba9cd869787020fab034.mp4", "1e95279e7bbdd9d085ca5ea5df423a34": "media/1e95279e7bbdd9d085ca5ea5df423a34.jpg", "5c251e6307f6c8cec1a0bcc57183ef27": "media/5c251e6307f6c8cec1a0bcc57183ef27.mp4", "9b72d0af278d6fceabdc162b2b925e80": "media/9b72d0af278d6fceabdc162b2b925e80.mp4", "09f9aed3bc3b5da1819bd71022082845": "media/09f9aed3bc3b5da1819bd71022082845.mp4", "4a96717a69c11bf9d8561aa65ae952b8": "media/4a96717a69c11bf9d8561aa65ae952b8.jpg", "c22ec709ea646423951c524b529ceeec": "media/c22ec709ea646423951c524b529ceeec.mp4", "ce7b5a72af4ea74dc0a57f143082d219": "media/ce7b5a72af4ea74dc0a57f143082d219.mp4", "b6cf38949fd239125aacd7e9f1d6014f": "media/b6cf38949fd239125aacd7e9f1d6014f.mp4", "d862830eb573e16b51d17da7245b7147": "media/d862830eb573e16b51d17da7245b7147.mp4", "8d4bcda8a2b84e99fa513880b1662ed3": "media/8d4bcda8a2b84e99fa513880b1662ed3.jpg", "66e89e64b0892733282fa2c585a67474": "media/66e89e64b0892733282fa2c585a67474.jpg", "8c661c4f8198bbc00db89ad411a200d5": "media/8c661c4f8198bbc00db89ad411a200d5.mp4", "596e99801cc4541d38aef21c5f4dae60": "media/596e99801cc4541d38aef21c5f4dae60.mp4", "2d4e0a54bc4311584e072bb1573d9aae": "media/2d4e0a54bc4311584e072bb1573d9aae.mp4", "a6d781f58c6aa717e96d11720ec2b537": "media/a6d781f58c6aa717e96d11720ec2b537.mp4", "8117d40471011a28040dd3104854b4da": "media/8117d40471011a28040dd3104854b4da.jpg", "da2ec41076cf6ff65fc88864884e5243": "media/da2ec41076cf6ff65fc88864884e5243.jpg", "1366e1c1caafd0df9ce38b4de1ae1d96": "media/1366e1c1caafd0df9ce38b4de1ae1d96.jpg", "7b4b14f56306fbf7bfd181fa22d5c739": "media/7b4b14f56306fbf7bfd181fa22d5c739.mp4", "d819fce301861b70cb329f3647998203": "media/d819fce301861b70cb329f3647998203.jpg", "21178d16bc556f6ddd43f0075f25f101": "media/21178d16bc556f6ddd43f0075f25f101.jpg", "2f62906b75ebb5afff869fd776a9c9e6": "media/2f62906b75ebb5afff869fd776a9c9e6.mp4", "51005ff4fdc8c8210f055733f60675ac": "media/51005ff4fdc8c8210f055733f60675ac.jpg", "fe4bad87f4448f431fc88f8dd6f2cbb5": "media/fe4bad87f4448f431fc88f8dd6f2cbb5.mp4", "c1a449ea817ab0b12dd5f08afcfc023e": "media/c1a449ea817ab0b12dd5f08afcfc023e.jpg", "4a34a0a9be3fa603296cb93ab0ccd4ee": "media/4a34a0a9be3fa603296cb93ab0ccd4ee.mp4", "8c1d10ccfdf513177bf83f6efaad1006": "media/8c1d10ccfdf513177bf83f6efaad1006.mp4", "70fa359cec589f76db0b09f2161ec8a5": "media/70fa359cec589f76db0b09f2161ec8a5.mp4", "bd87d7592d3528f90599a9fc08177fea": "media/bd87d7592d3528f90599a9fc08177fea.jpg", "daaf6ff8e144ebf2de306df528d73b0f": "media/daaf6ff8e144ebf2de306df528d73b0f.jpg", "095eb36f38e98469537461d134312abf": "media/095eb36f38e98469537461d134312abf.jpg", "ccabe9e15f82956d58116b110eae2652": "media/ccabe9e15f82956d58116b110eae2652.mp4", "677e485f751c57a7aedfd41a7b4736af": "media/677e485f751c57a7aedfd41a7b4736af.jpg", "4bdc43d1eb4582dd01c90e91e1b8cc72": "media/4bdc43d1eb4582dd01c90e91e1b8cc72.jpg", "96b82a45d9e66315d429e6e75488dfb0": "media/96b82a45d9e66315d429e6e75488dfb0.jpg", "1890ece2964ddbb69af83e14adb4ccc0": "media/1890ece2964ddbb69af83e14adb4ccc0.jpg", "3b872a7918950ecfa7f2cd4b5fc8d6df": "media/3b872a7918950ecfa7f2cd4b5fc8d6df.mp4", "dcdee83a19eed5657d48839e6b2b2c06": "media/dcdee83a19eed5657d48839e6b2b2c06.jpg", "c927d6d9ede84ebc6adffba4921f820d": "media/c927d6d9ede84ebc6adffba4921f820d.jpg", "36330049d7ae3918a4553657335e0699": "media/36330049d7ae3918a4553657335e0699.jpg", "47ba27696aa31d6c2af05c767aff95fd": "media/47ba27696aa31d6c2af05c767aff95fd.jpg", "7b1cb2f4e3d0d8910fd81d4c4874d306": "media/7b1cb2f4e3d0d8910fd81d4c4874d306.jpg", "ca1c2dd626d14d9c64331846285b5222": "media/ca1c2dd626d14d9c64331846285b5222.mp4", "2a8d54f732e7d30c7b553efc951c202d": "media/2a8d54f732e7d30c7b553efc951c202d.jpg", "4f6d165215a043cd387575913f6ea823": "media/4f6d165215a043cd387575913f6ea823.jpg", "37904bbed0ecf0a143e105d768ccb853": "media/37904bbed0ecf0a143e105d768ccb853.mp4", "78e306dc2f5496704e88e1d625e0b69c": "media/78e306dc2f5496704e88e1d625e0b69c.jpg", "0462367f4a30ae481a3c51854dccde09": "media/0462367f4a30ae481a3c51854dccde09.mp4", "758de8ebef96aa9a4d51352541b86c6f": "media/758de8ebef96aa9a4d51352541b86c6f.jpg", "9b777b45bcc42874ca23122e979dd594": "media/9b777b45bcc42874ca23122e979dd594.jpg", "765835a324a5a8e4dcae97cc8b1185bc": "media/765835a324a5a8e4dcae97cc8b1185bc.jpg", "aeabaae8e2f388c0159532c51bf37944": "media/aeabaae8e2f388c0159532c51bf37944.jpg", "4bff530d3865248283120980fcd111e3": "media/4bff530d3865248283120980fcd111e3.mp4", "4dfa3ab883fa06e307b2c4be53aec2ce": "media/4dfa3ab883fa06e307b2c4be53aec2ce.mp4", "d1e34b733a99320a0840cc87e8f4a884": "media/d1e34b733a99320a0840cc87e8f4a884.jpg", "245d1818726b949cadfccffee0d9a961": "media/245d1818726b949cadfccffee0d9a961.jpg", "92b1943798fe66a466cc0a01613934b4": "media/92b1943798fe66a466cc0a01613934b4.jpg", "b00237e971064a9ccf7732a98f92c2af": "media/b00237e971064a9ccf7732a98f92c2af.mp4", "7c93f9462e2f4d5224987b2beb3ec303": "media/7c93f9462e2f4d5224987b2beb3ec303.jpg", "8c2356e7bab556500ecb6051ef29a6b6": "media/8c2356e7bab556500ecb6051ef29a6b6.jpg", "ebc30eeed2ebfdf3c5a6f6dba78a3c7e": "media/ebc30eeed2ebfdf3c5a6f6dba78a3c7e.mp4", "c5a1e0be036007d403094937d7ce9071": "media/c5a1e0be036007d403094937d7ce9071.mp4", "1a856a6923e872a97afea00eec440641": "media/1a856a6923e872a97afea00eec440641.mp4", "b69fcb0d0c9d0e9dd3a2115a33c472df": "media/b69fcb0d0c9d0e9dd3a2115a33c472df.jpg", "f7f548a74c0c32cdc2c0d16d80b670bc": "media/f7f548a74c0c32cdc2c0d16d80b670bc.mp4", "e1ad68aa8f38d0316a0ecf23ef6fc269": "media/e1ad68aa8f38d0316a0ecf23ef6fc269.mp4", "af9bf4b717ac357656dc2cef128e6526": "media/af9bf4b717ac357656dc2cef128e6526.jpg", "4bfc8a6a9b7bae2a081775cd23461c1a": "media/4bfc8a6a9b7bae2a081775cd23461c1a.mp4", "6bf06d17a1fc7d15b0792a6ca6a8b40f": "media/6bf06d17a1fc7d15b0792a6ca6a8b40f.mp4", "2d02ee8c61f6fcbb8ba1a2c634955b35": "media/2d02ee8c61f6fcbb8ba1a2c634955b35.jpg", "695cbb3ff6bed3c0f7b82fbe84785932": "media/695cbb3ff6bed3c0f7b82fbe84785932.mp4", "38fafed5a5d4e0abc4d3d70fa7bd2c37": "media/38fafed5a5d4e0abc4d3d70fa7bd2c37.mp4", "e54f10b2332feb660f63688ec6b0a428": "media/e54f10b2332feb660f63688ec6b0a428.jpg", "f27e4288b29035cb3ef35b515e685848": "media/f27e4288b29035cb3ef35b515e685848.jpg", "60fb82ae4d4d35041d541ca28861c4bb": "media/60fb82ae4d4d35041d541ca28861c4bb.mp4", "d355e34bf16581c702175c7eebd805a1": "media/d355e34bf16581c702175c7eebd805a1.jpg", "aecb334f4fb9c2e3e4052fb00a3711be": "media/aecb334f4fb9c2e3e4052fb00a3711be.jpg", "32d4d54e4823d42fe6c13f3935de1988": "media/32d4d54e4823d42fe6c13f3935de1988.mp4", "7a880e8455d8e1ae4e0bbb8151f9cea1": "media/7a880e8455d8e1ae4e0bbb8151f9cea1.mp4", "77229f0074ccde4e899f9a7b3d02b87f": "media/77229f0074ccde4e899f9a7b3d02b87f.mp4", "6eeba17d031f21003863fdf9a564ea31": "media/6eeba17d031f21003863fdf9a564ea31.mp4", "270728e95b96738d754c22576aa2bd62": "media/270728e95b96738d754c22576aa2bd62.mp4", "13b11ba26612db2af38f7100e743dd4e": "media/13b11ba26612db2af38f7100e743dd4e.mp4", "fb94095c5db646611c49625292931e3d": "media/fb94095c5db646611c49625292931e3d.jpg", "f501bae1e58dd7b44ea75d09b07cd46d": "media/f501bae1e58dd7b44ea75d09b07cd46d.jpg", "9cf7764c314f6e124d1d0050b445f083": "media/9cf7764c314f6e124d1d0050b445f083.mp4", "8e1db681a871881f2554828305c60c47": "media/8e1db681a871881f2554828305c60c47.jpg", "89a78f6f1dddd8e5801bd77c520f43d8": "media/89a78f6f1dddd8e5801bd77c520f43d8.mp4", "e6b336d713255841c4ea5d5e122df3df": "media/e6b336d713255841c4ea5d5e122df3df.jpg", "4d0387ad44dad7c77d57703b728e71bd": "media/4d0387ad44dad7c77d57703b728e71bd.mp4", "ad2e70680a2c67985924eb91fb2c0ce2": "media/ad2e70680a2c67985924eb91fb2c0ce2.mp4", "86d9b403955e4bd170d310e4669c9e26": "media/86d9b403955e4bd170d310e4669c9e26.jpg", "18bbd3f2fc566cb224cd327121347e80": "media/18bbd3f2fc566cb224cd327121347e80.jpg", "08de9cc57f628428c872889c8695667c": "media/08de9cc57f628428c872889c8695667c.mp4", "f1032d9c3b7334b61cf020d460bc2b65": "media/f1032d9c3b7334b61cf020d460bc2b65.jpg", "16b7dd4e395448658ad5e48670004ebc": "media/16b7dd4e395448658ad5e48670004ebc.jpg", "da37cea61c1ab86bc64b36ce564add50": "media/da37cea61c1ab86bc64b36ce564add50.jpg", "d7ca91a7e94aadf42cfcd79e53456c3f": "media/d7ca91a7e94aadf42cfcd79e53456c3f.mp4", "088d7f5d9cc8996896743f09823e3007": "media/088d7f5d9cc8996896743f09823e3007.jpg", "5b0001e1b7b03bc1b32822c5d1976163": "media/5b0001e1b7b03bc1b32822c5d1976163.jpg", "362b4b6c8d1a26692204ec4653dfb650": "media/362b4b6c8d1a26692204ec4653dfb650.jpg", "a6bfe9b9922a9bd4949c4207cd130277": "media/a6bfe9b9922a9bd4949c4207cd130277.jpg", "d39c161d953b84f3a4dd025a4a7438d6": "media/d39c161d953b84f3a4dd025a4a7438d6.mp4", "d7a4919f4e8f202db10e7719e18bf566": "media/d7a4919f4e8f202db10e7719e18bf566.mp4", "555a4338f068386a06608beb6a92ed78": "media/555a4338f068386a06608beb6a92ed78.mp4", "497faa708c78fae69edf0c9e656f1716": "media/497faa708c78fae69edf0c9e656f1716.mp4", "0ac877d3cdb8c4b2e7ae096fb383e88f": "media/0ac877d3cdb8c4b2e7ae096fb383e88f.jpg", "fc874fc2b62c99e48cedcebcef1deafd": "media/fc874fc2b62c99e48cedcebcef1deafd.jpg", "ff0f77fded784d8af911f07be3ea3c8a": "media/ff0f77fded784d8af911f07be3ea3c8a.mp4", "b49d7c552ef6df443bf1a2924cd97331": "media/b49d7c552ef6df443bf1a2924cd97331.jpg", "023035f3862f197174b51dbfb19a9d99": "media/023035f3862f197174b51dbfb19a9d99.jpg", "efe3269d18d8b5254ffd2d385d61d395": "media/efe3269d18d8b5254ffd2d385d61d395.mp4", "7ccd48c6930d0fa4e0ccd8d75c471b02": "media/7ccd48c6930d0fa4e0ccd8d75c471b02.jpg", "d97e1a7a9518e1e6a4ed746f7c5956c8": "media/d97e1a7a9518e1e6a4ed746f7c5956c8.jpg", "4ac4cf5ef73a0fea206c6c8fbf2ce28f": "media/4ac4cf5ef73a0fea206c6c8fbf2ce28f.mp4", "2a781655e1079d39dfab7130c3d12e80": "media/2a781655e1079d39dfab7130c3d12e80.mp4", "53837d55a185b4b337bd45b93136dc3b": "media/53837d55a185b4b337bd45b93136dc3b.mp4", "40c8a9ef09fc2129cae6acfaa7a6df83": "media/40c8a9ef09fc2129cae6acfaa7a6df83.mp4", "ebeade10bc3a9b2ac0a249079b2d2bab": "media/ebeade10bc3a9b2ac0a249079b2d2bab.jpg", "197feb8cb6a8cb1c6d85b8815c963e35": "media/197feb8cb6a8cb1c6d85b8815c963e35.mp4", "517c43ce3279fdc94795946c82b3b114": "media/517c43ce3279fdc94795946c82b3b114.mp4", "18d965ed38a7fb10b0de1372b8a1758f": "media/18d965ed38a7fb10b0de1372b8a1758f.mp4", "bc95a37e8bb6fb19a4bb6dd92158672d": "media/bc95a37e8bb6fb19a4bb6dd92158672d.jpg", "136b8c363d69e588bcbd46da19cf1052": "media/136b8c363d69e588bcbd46da19cf1052.jpg", "9896e5648e7b8a8dea9dc48688952d69": "media/9896e5648e7b8a8dea9dc48688952d69.jpg", "87baea544517c24d454a2dab0eea2f79": "media/87baea544517c24d454a2dab0eea2f79.jpg", "e0f0ba019aa16b2558963190de63f3c3": "media/e0f0ba019aa16b2558963190de63f3c3.jpg", "402ce2a01a8aa0dee1820b2e7b14301d": "media/402ce2a01a8aa0dee1820b2e7b14301d.mp4", "7879628f341394c5290a33b1516b0e36": "media/7879628f341394c5290a33b1516b0e36.jpg", "578018f0572a406d05b3c866b81fb681": "media/578018f0572a406d05b3c866b81fb681.jpg", "9e9fa475d24539b6fabbfeeff1f9b8ac": "media/9e9fa475d24539b6fabbfeeff1f9b8ac.jpg", "d5737c0c258338698775f52720a69a3c": "media/d5737c0c258338698775f52720a69a3c.jpg", "34660c1cd0249ab49e9e65b61cfa5d2a": "media/34660c1cd0249ab49e9e65b61cfa5d2a.jpg", "53a926e7911c482270fa4c1e2ef0a6d8": "media/53a926e7911c482270fa4c1e2ef0a6d8.jpg", "948716ec4dc663fa3e26d9d62cbc7b3d": "media/948716ec4dc663fa3e26d9d62cbc7b3d.mp4", "8fa57578823dc207996322f4517523aa": "media/8fa57578823dc207996322f4517523aa.jpg", "207826d4abc31226d006a6fe47f63cff": "media/207826d4abc31226d006a6fe47f63cff.jpg", "ed532814bcd9d5f029d621e28c510f61": "media/ed532814bcd9d5f029d621e28c510f61.jpg", "185c5c9592e61e34dc1a7e059c00c237": "media/185c5c9592e61e34dc1a7e059c00c237.mp4", "893d56a368119ebda7099eaef7c169dd": "media/893d56a368119ebda7099eaef7c169dd.jpg", "3861bc2bb51eb11be4cbf48d792683b1": "media/3861bc2bb51eb11be4cbf48d792683b1.jpg", "b17e8f31170ee10ebdaeec9b26172083": "media/b17e8f31170ee10ebdaeec9b26172083.mp4", "a8f18da29df02dc118618b920b0617d0": "media/a8f18da29df02dc118618b920b0617d0.jpg", "8835b697b21e902a39408a67b44970ae": "media/8835b697b21e902a39408a67b44970ae.jpg", "bce52a6ab1f7ca1c56551d5dd94dd884": "media/bce52a6ab1f7ca1c56551d5dd94dd884.mp4", "70d07c5c7ec4909dfd0dd733e58e9fee": "media/70d07c5c7ec4909dfd0dd733e58e9fee.jpg", "982d57c1e25eb0621c0ffad93ea8602a": "media/982d57c1e25eb0621c0ffad93ea8602a.mp4", "46bc498d9fa4b777251cf0f99f2f17fe": "media/46bc498d9fa4b777251cf0f99f2f17fe.mp4", "e2afefdc4c1fee65abb93b09081742df": "media/e2afefdc4c1fee65abb93b09081742df.jpg", "f0e3143ccc26854d7503602682a44f6f": "media/f0e3143ccc26854d7503602682a44f6f.jpg", "3c68c7b1b74bd19d7bcb744285fbe11b": "media/3c68c7b1b74bd19d7bcb744285fbe11b.mp4", "5e76ac0e39302fb4550353091d922344": "media/5e76ac0e39302fb4550353091d922344.mp4", "779775df4e03841193603683bff31c1f": "media/779775df4e03841193603683bff31c1f.jpg", "62ee29377ab4be6b9940137885e3364d": "media/62ee29377ab4be6b9940137885e3364d.mp4", "7a87ce2467050ccab74a767cc8f9c75f": "media/7a87ce2467050ccab74a767cc8f9c75f.jpg", "594fc22b8fcb40cff619210efa285869": "media/594fc22b8fcb40cff619210efa285869.mp4", "c5cef79430fab0fe165b2f0accb0a930": "media/c5cef79430fab0fe165b2f0accb0a930.jpg", "cbae80deb5850bf18717a3da27df35c4": "media/cbae80deb5850bf18717a3da27df35c4.jpg", "5ed2597320b174c571c6cfd4753fbd4e": "media/5ed2597320b174c571c6cfd4753fbd4e.jpg", "94dc9f8fdeff951e35091b3aa00be14f": "media/94dc9f8fdeff951e35091b3aa00be14f.jpg", "4bc6782b777cc490509bf21ebb34ba14": "media/4bc6782b777cc490509bf21ebb34ba14.mp4", "5ac28025419281aaf07aa3561dae2d30": "media/5ac28025419281aaf07aa3561dae2d30.jpg", "1cbdb1529fd275502501322a45a6b7be": "media/1cbdb1529fd275502501322a45a6b7be.mp4", "3aa57b0f540a7b61900a786c96866a9a": "media/3aa57b0f540a7b61900a786c96866a9a.jpg", "ead916153219c98ce39aec013f11a990": "media/ead916153219c98ce39aec013f11a990.mp4", "a5ea48716e98b3b00076cbfc0fd339eb": "media/a5ea48716e98b3b00076cbfc0fd339eb.jpg", "9b54121defe1da530eccb10befb51364": "media/9b54121defe1da530eccb10befb51364.jpg", "2a402cbbadafc2c5dfde0e3ab1ce7239": "media/2a402cbbadafc2c5dfde0e3ab1ce7239.jpg", "b84753e5eb2aa5de9b8d921dfe8f9adc": "media/b84753e5eb2aa5de9b8d921dfe8f9adc.jpg", "ce71080d7dc62102207325b8f0e5f869": "media/ce71080d7dc62102207325b8f0e5f869.jpg", "f2eeec290b71fad8cddb5e75069d25f4": "media/f2eeec290b71fad8cddb5e75069d25f4.jpg", "6917fef19c5670b9b35c06ab923418f2": "media/6917fef19c5670b9b35c06ab923418f2.jpg", "bef83d37a2c79dab8cea1548d6c870b4": "media/bef83d37a2c79dab8cea1548d6c870b4.jpg", "369f28549af177d36a0536bc538597fa": "media/369f28549af177d36a0536bc538597fa.mp4", "95dc5e1e45cb8f9c9baf2e9832e64173": "media/95dc5e1e45cb8f9c9baf2e9832e64173.mp4", "230de416adafdc33356b299ea6c825f0": "media/230de416adafdc33356b299ea6c825f0.mp4", "805345c3c18b9f2ac9676adcadce50fa": "media/805345c3c18b9f2ac9676adcadce50fa.mp4", "4acd1fa04254201f9ea580a1df2fbc43": "media/4acd1fa04254201f9ea580a1df2fbc43.mp4", "1d0b8e71ac1f6faf9d584603d3a2e80d": "media/1d0b8e71ac1f6faf9d584603d3a2e80d.mp4", "0421704a711b8f7e9cdb692cfc29c139": "media/0421704a711b8f7e9cdb692cfc29c139.jpg", "19dc902fd03132b6da3e04bf1d4bd85d": "media/19dc902fd03132b6da3e04bf1d4bd85d.jpg", "c7820c3c9b5fd05d011fa18631807ff0": "media/c7820c3c9b5fd05d011fa18631807ff0.jpg", "11a221fd26738d1c71d24a26f4c31e7d": "media/11a221fd26738d1c71d24a26f4c31e7d.jpg", "53e8cc4d34314ed77c1de201c9f91b65": "media/53e8cc4d34314ed77c1de201c9f91b65.mp4", "50af5ccf54084345d349489acc3587b0": "media/50af5ccf54084345d349489acc3587b0.jpg", "ce8b15c8522e4c57289057e66bf89c26": "media/ce8b15c8522e4c57289057e66bf89c26.jpg", "cb2230fe049936cfcf9750ead4f3869c": "media/cb2230fe049936cfcf9750ead4f3869c.jpg", "6766e995aebad45f2273bfd441d93c31": "media/6766e995aebad45f2273bfd441d93c31.jpg", "499cfea66297b31a2dfbbbf5aea2f351": "media/499cfea66297b31a2dfbbbf5aea2f351.jpg", "fe456f3b7ca84ea0acf9c40c558f8939": "media/fe456f3b7ca84ea0acf9c40c558f8939.mp4", "e48c9d257939ed06539ac61b369f1225": "media/e48c9d257939ed06539ac61b369f1225.jpg", "8878e953cc232b97c30a91abaa9ccf3f": "media/8878e953cc232b97c30a91abaa9ccf3f.jpg", "18337863ebf1c33a96ef1603051ae5c4": "media/18337863ebf1c33a96ef1603051ae5c4.mp4", "888d7946309ca7149248d50ef166853c": "media/888d7946309ca7149248d50ef166853c.mp4", "5ac13b4a1b0c9a959d96ca8d1830273c": "media/5ac13b4a1b0c9a959d96ca8d1830273c.mp4", "65dc9015b57a7f1afbd5fd687df766f7": "media/65dc9015b57a7f1afbd5fd687df766f7.jpg", "7f26f1a3d78515d99e8a7e506bb4d50e": "media/7f26f1a3d78515d99e8a7e506bb4d50e.jpg", "de80effba138b122182274b2b1c600b8": "media/de80effba138b122182274b2b1c600b8.mp4", "c38925988f20b60be861441fda87f2d3": "media/c38925988f20b60be861441fda87f2d3.jpg", "06f22b402a13323a50f73abffce886ed": "media/06f22b402a13323a50f73abffce886ed.mp4", "4d25a24261f022990405980a4544cf3f": "media/4d25a24261f022990405980a4544cf3f.mp4", "593ffdedecca39ba0e55e3c2ebe136c4": "media/593ffdedecca39ba0e55e3c2ebe136c4.jpg", "5f9abd0018b8be550b6994717faed181": "media/5f9abd0018b8be550b6994717faed181.jpg", "a3cc64d6a5e2e5a1546dfd78f68b9df5": "media/a3cc64d6a5e2e5a1546dfd78f68b9df5.mp4", "82e2e8b286b91d6db90fb11f57e5d057": "media/82e2e8b286b91d6db90fb11f57e5d057.jpg", "b357814fa815c32e7abfb842a9626831": "media/b357814fa815c32e7abfb842a9626831.jpg", "65cbf104845a1d0f99818c9ffe4405ac": "media/65cbf104845a1d0f99818c9ffe4405ac.jpg", "b6418d3dfb0af3e2053055c77a651f44": "media/b6418d3dfb0af3e2053055c77a651f44.mp4", "d64902d0ba15b77150517091db6a68e5": "media/d64902d0ba15b77150517091db6a68e5.jpg", "77fbf42dc35175939f5300902dba4aee": "media/77fbf42dc35175939f5300902dba4aee.mp4", "83e77156821917a3aba1381fab30bd13": "media/83e77156821917a3aba1381fab30bd13.jpg", "301a5aae73cd5c6d880144b6fae38d81": "media/301a5aae73cd5c6d880144b6fae38d81.jpg", "656e461c0c94e7fefcdbd321e8ed3ce2": "media/656e461c0c94e7fefcdbd321e8ed3ce2.mp4", "d624b5328acf1bd03284f1255fc46063": "media/d624b5328acf1bd03284f1255fc46063.jpg", "1c41ab5f4a6d9994b434dacb585b1894": "media/1c41ab5f4a6d9994b434dacb585b1894.jpg", "cfac03f114c5349167d322bb0f2e9e9e": "media/cfac03f114c5349167d322bb0f2e9e9e.jpg", "927fb2dce0f5f940026b1f2814b704b7": "media/927fb2dce0f5f940026b1f2814b704b7.mp4", "b66d9e24b743706a30545a73d90819ae": "media/b66d9e24b743706a30545a73d90819ae.mp4", "612a7acce98692601cb02dd541099f19": "media/612a7acce98692601cb02dd541099f19.mp4", "3a6accc7140c2dee05c102dc8e63418b": "media/3a6accc7140c2dee05c102dc8e63418b.jpg", "ab7e8545bc4765c5692dad81e32e9d3c": "media/ab7e8545bc4765c5692dad81e32e9d3c.mp4", "f7042ee6d770c362d3e6bd9a4bf9990a": "media/f7042ee6d770c362d3e6bd9a4bf9990a.mp4", "8268b1f1b501e4fe4ee860b6fe9fa7c2": "media/8268b1f1b501e4fe4ee860b6fe9fa7c2.jpg", "3b4e679582990a8edc3801cd40398e36": "media/3b4e679582990a8edc3801cd40398e36.jpg", "5fdcfa7d150ed7429c97d9d2e420b42e": "media/5fdcfa7d150ed7429c97d9d2e420b42e.jpg", "14205f9a7fa3546a0f101bbec219bba1": "media/14205f9a7fa3546a0f101bbec219bba1.mp4", "0ce910878004856e67242d53db6878f9": "media/0ce910878004856e67242d53db6878f9.jpg", "47c6c2e65d4b32b5602a7f0fd9821a3b": "media/47c6c2e65d4b32b5602a7f0fd9821a3b.jpg", "5a9d48833e26c152c66abf3d74699e1e": "media/5a9d48833e26c152c66abf3d74699e1e.mp4", "0165b907d16f7ae7a3511f96f326a419": "media/0165b907d16f7ae7a3511f96f326a419.mp4", "9f5c0b370910fe1fb1962175271e572b": "media/9f5c0b370910fe1fb1962175271e572b.mp4", "755fd8a7e0fc39bb8e9fe023211b2a62": "media/755fd8a7e0fc39bb8e9fe023211b2a62.jpg", "bfeaa540c5c7b4d0f7fde4c7885a9b32": "media/bfeaa540c5c7b4d0f7fde4c7885a9b32.jpg", "f3d5f2860e6955d97c3db4c966209059": "media/f3d5f2860e6955d97c3db4c966209059.jpg", "0b2f96066af77ab403b49dc4ca746419": "media/0b2f96066af77ab403b49dc4ca746419.jpg", "859b086670a959d26c4df367de3577a4": "media/859b086670a959d26c4df367de3577a4.mp4", "803a948829038e9220b5cff4d235a082": "media/803a948829038e9220b5cff4d235a082.mp4", "13dfb43e159c0c64d1351e8ce26c0c47": "media/13dfb43e159c0c64d1351e8ce26c0c47.jpg", "1b5572000641fadc0d3184a5b5ec298e": "media/1b5572000641fadc0d3184a5b5ec298e.jpg", "e8f3af480e9fb5594392947db975496c": "media/e8f3af480e9fb5594392947db975496c.mp4", "7d3762c87d7c1e6a2676e3563340b24c": "media/7d3762c87d7c1e6a2676e3563340b24c.jpg", "c8c3385ad198e4d5bd2d4f624ed4718e": "media/c8c3385ad198e4d5bd2d4f624ed4718e.jpg", "2a7d1656ec4aba886e7a65887adc2fea": "media/2a7d1656ec4aba886e7a65887adc2fea.mp4", "5b8272e6db2bfdb27bd809acd28797b8": "media/5b8272e6db2bfdb27bd809acd28797b8.jpg", "64b2532275f9dd15812898522941af7a": "media/64b2532275f9dd15812898522941af7a.mp4", "4dea703671f2e222d035b5068fb3b459": "media/4dea703671f2e222d035b5068fb3b459.jpg", "daa7d4c7e4b3b7bc120cf3cbb81d6a1d": "media/daa7d4c7e4b3b7bc120cf3cbb81d6a1d.jpg", "c3b0fb9006e35fdd3d65faaa04f65549": "media/c3b0fb9006e35fdd3d65faaa04f65549.mp4", "12c76384e3b6c086d1dea9a932a1bdd0": "media/12c76384e3b6c086d1dea9a932a1bdd0.jpg", "4697d279237630d9fdf181eac5e8ada8": "media/4697d279237630d9fdf181eac5e8ada8.mp4", "85a0f5ae580116c7b93935a8f11e0339": "media/85a0f5ae580116c7b93935a8f11e0339.jpg", "89245306ff0c8fa91cbd18b71218afbb": "media/89245306ff0c8fa91cbd18b71218afbb.mp4", "469cd67f3cc6cead38f9de8d7b524640": "media/469cd67f3cc6cead38f9de8d7b524640.jpg", "6f81eb0b8271eefc4e2701b0bb9b90b1": "media/6f81eb0b8271eefc4e2701b0bb9b90b1.mp4", "4413f960acf0c90961a828a400eac272": "media/4413f960acf0c90961a828a400eac272.mp4", "5d563e8fb1959a5aacb9bc69d24d88e7": "media/5d563e8fb1959a5aacb9bc69d24d88e7.jpg", "ab97de7ef72e983b687a34f92e64671c": "media/ab97de7ef72e983b687a34f92e64671c.jpg", "ae674e863859542382210d9c489c1ae7": "media/ae674e863859542382210d9c489c1ae7.jpg", "7a16a8272128e6d891fc3ee42996ad0c": "media/7a16a8272128e6d891fc3ee42996ad0c.mp4", "2c36bef174523069ea8b9da0d28ba1b8": "media/2c36bef174523069ea8b9da0d28ba1b8.mp4", "6c7c11941bd1f30d3106d00da1593c2e": "media/6c7c11941bd1f30d3106d00da1593c2e.jpg", "78a679f35cbeb406a1a3d4f040ba3a09": "media/78a679f35cbeb406a1a3d4f040ba3a09.mp4", "23b9e4793dea3603a7ca90552517ee9f": "media/23b9e4793dea3603a7ca90552517ee9f.mp4", "6c7fc1be8c4027f3af02836007ecbd13": "media/6c7fc1be8c4027f3af02836007ecbd13.mp4", "ae1e80c9c064c947bf66edd1f271e8c8": "media/ae1e80c9c064c947bf66edd1f271e8c8.jpg", "1d5522a26f9240b3d8f06062d87121f5": "media/1d5522a26f9240b3d8f06062d87121f5.jpg", "96137fd240967f177b2f3da7761f6ddc": "media/96137fd240967f177b2f3da7761f6ddc.jpg", "b62673d9c5f233a9a7e77cd0b91b27a6": "media/b62673d9c5f233a9a7e77cd0b91b27a6.jpg", "454b696be4fce805c47b6d8cbc7d2e04": "media/454b696be4fce805c47b6d8cbc7d2e04.mp4", "be79d917592063a58c9635044e4072a5": "media/be79d917592063a58c9635044e4072a5.mp4", "dc5f4d1e8859871e4200af202a527913": "media/dc5f4d1e8859871e4200af202a527913.jpg", "4caab62b814cf75715642d109a4d23fa": "media/4caab62b814cf75715642d109a4d23fa.jpg", "a5b7d664ab7a1788a4f5a19a36f062f9": "media/a5b7d664ab7a1788a4f5a19a36f062f9.mp4", "30c58450aeaf0f7550c22d456af1f6bb": "media/30c58450aeaf0f7550c22d456af1f6bb.mp4"};</script>
+<script>/* Minimal runtime for the portfolio pages: renders <template id="dc-tpl"> with Component.renderVals(). */
+(function () {
+  class DCLogic {
+    constructor() { this.state = {}; this.props = {}; }
+    setState(patch) {
+      this.state = Object.assign({}, this.state, typeof patch === 'function' ? patch(this.state) : patch);
+      render();
+    }
+  }
+  window.DCLogic = DCLogic;
+
+  const HOLE = /\{\{\s*([^}]+?)\s*\}\}/g;
+  const ONE = /^\{\{\s*([^}]+?)\s*\}\}$/;
+  let comp, tpl, root;
+
+  function lookup(path, scope) {
+    const parts = path.split('.');
+    for (let s = scope; s; s = s.__up) {
+      if (Object.prototype.hasOwnProperty.call(s, parts[0])) {
+        let v = s[parts[0]];
+        for (let i = 1; i < parts.length && v != null; i++) v = v[parts[i]];
+        return v;
+      }
+    }
+    return undefined;
+  }
+  function str(v) { return v == null || v === false ? '' : String(v); }
+  function interp(text, scope) { return text.replace(HOLE, (_, p) => str(lookup(p, scope))); }
+  function child(scope, vars) { const s = Object.assign({}, vars); s.__up = scope; return s; }
+
+  function build(node, scope, out) {
+    if (node.nodeType === 3) { out.push(document.createTextNode(node.nodeValue.indexOf('{{') < 0 ? node.nodeValue : interp(node.nodeValue, scope))); return; }
+    if (node.nodeType !== 1) return;
+    const tag = node.tagName.toLowerCase();
+    if (tag === 'sc-for') {
+      const m = ONE.exec((node.getAttribute('list') || '').trim());
+      const list = m ? lookup(m[1], scope) : null;
+      const as = node.getAttribute('as') || 'item';
+      (Array.isArray(list) ? list : []).forEach((item, i) => {
+        const s = child(scope, { [as]: item, index: i });
+        node.childNodes.forEach((c) => build(c, s, out));
+      });
+      return;
+    }
+    if (tag === 'sc-if') {
+      const m = ONE.exec((node.getAttribute('value') || '').trim());
+      if (m && lookup(m[1], scope)) node.childNodes.forEach((c) => build(c, scope, out));
+      return;
+    }
+    const el = node.namespaceURI === 'http://www.w3.org/1999/xhtml' ? document.createElement(node.localName) : document.createElementNS(node.namespaceURI, node.localName);
+    el.__h = {};
+    for (const a of Array.from(node.attributes)) {
+      const name = a.name;
+      if (name.indexOf('hint-') === 0) continue;
+      if (/^on[a-z]+$/i.test(name)) {
+        const m = ONE.exec(a.value.trim());
+        const fn = m && lookup(m[1], scope);
+        if (typeof fn === 'function') el.__h[name.slice(2).toLowerCase()] = fn;
+        continue;
+      }
+      el.setAttribute(name, (a.value.indexOf('{{') < 0 ? a.value : interp(a.value, scope)).replace(/\/_blob\/([0-9a-f]{32})/g, (m, id) => (window.__MEDIA && window.__MEDIA[id]) || m));
+    }
+    const kids = [];
+    node.childNodes.forEach((c) => build(c, scope, kids));
+    kids.forEach((k) => el.appendChild(k));
+    out.push(el);
+  }
+
+  const bound = new WeakMap();
+  function bind(el) {
+    let set = bound.get(el);
+    if (!set) { set = new Set(); bound.set(el, set); }
+    Object.keys(el.__h || {}).forEach((evt) => {
+      if (set.has(evt)) return;
+      set.add(evt);
+      el.addEventListener(evt, (e) => { const f = el.__h && el.__h[evt]; if (f) f(e); }, evt.indexOf('touch') === 0 || evt === 'wheel' ? { passive: true } : false);
+    });
+  }
+  function prepMedia(el) {
+    if (el.tagName === 'VIDEO' && el.hasAttribute('muted')) { el.muted = true; if (el.hasAttribute('autoplay')) { const p = el.play && el.play(); if (p && p.catch) p.catch(() => {}); } }
+  }
+  function walkNew(el) {
+    if (el.nodeType !== 1) return;
+    bind(el); prepMedia(el);
+    Array.from(el.childNodes).forEach(walkNew);
+  }
+
+  function patch(parent, oldN, newN) {
+    if (!oldN) { parent.appendChild(newN); walkNew(newN); return; }
+    if (oldN.nodeType !== newN.nodeType || oldN.nodeName !== newN.nodeName ||
+        (oldN.nodeType === 1 && (oldN.tagName === 'VIDEO' || oldN.tagName === 'IMG') && oldN.getAttribute('src') !== newN.getAttribute('src'))) {
+      parent.replaceChild(newN, oldN); walkNew(newN); return;
+    }
+    if (oldN.nodeType === 3) { if (oldN.nodeValue !== newN.nodeValue) oldN.nodeValue = newN.nodeValue; return; }
+    if (oldN.nodeType !== 1) return;
+    for (const a of Array.from(oldN.attributes)) if (!newN.hasAttribute(a.name)) oldN.removeAttribute(a.name);
+    for (const a of Array.from(newN.attributes)) if (oldN.getAttribute(a.name) !== a.value) oldN.setAttribute(a.name, a.value);
+    oldN.__h = newN.__h; bind(oldN);
+    patchKids(oldN, Array.from(newN.childNodes));
+  }
+  function patchKids(parent, next) {
+    const cur = Array.from(parent.childNodes);
+    next.forEach((n, i) => patch(parent, cur[i], n));
+    for (let i = cur.length - 1; i >= next.length; i--) parent.removeChild(cur[i]);
+  }
+
+  function render() {
+    const vals = comp.renderVals() || {};
+    const out = [];
+    tpl.content.childNodes.forEach((c) => build(c, vals, out));
+    patchKids(root, out);
+  }
+
+  function start() {
+    tpl = document.getElementById('dc-tpl');
+    root = document.getElementById('dc-root');
+    const C = window.Component;
+    comp = new C();
+    render();
+    if (comp.componentDidMount) comp.componentDidMount();
+  }
+  window.__dcStart = start;
+})();
+</script>
+<script>
+
+class Component extends DCLogic {
+renderVals() {
+const heroDesktop = '/_blob/ead916153219c98ce39aec013f11a990';
+const heroMobile = '/_blob/13b11ba26612db2af38f7100e743dd4e';
+const heroD = heroDesktop || heroMobile;
+const heroM = heroMobile || heroDesktop;
+const cat = (this.state && this.state.cat) || 'all';
+const cats = [
+{ id: 'all', label: 'all' },
+{ id: 'golden', label: 'golden hour' },
+{ id: 'everyday', label: 'everyday' }
+];
+const labels = { golden: 'golden hour', elsewhere: 'elsewhere', colours: 'collecting colours', everyday: 'everyday' };
+const reels = [
+{ title: 'golden hour, calabria', cat: 'golden', color: '#C4562E', best: true, src: '/_blob/37904bbed0ecf0a143e105d768ccb853', poster: '/_blob/893d56a368119ebda7099eaef7c169dd' },
+{ title: 'per sempre innamorato dei tramonti', cat: 'golden', color: '#9C4523', best: true, src: '/_blob/1d0b8e71ac1f6faf9d584603d3a2e80d', poster: '/_blob/136b8c363d69e588bcbd46da19cf1052' },
+{ title: 'humans just being humans', cat: 'everyday', color: '#7A3B2A', best: true, src: '/_blob/2f62906b75ebb5afff869fd776a9c9e6', poster: '/_blob/11a221fd26738d1c71d24a26f4c31e7d' },
+{ title: 'You. Me. Paris.', cat: 'elsewhere', color: '#5A3A2C', best: true, src: '/_blob/e8f3af480e9fb5594392947db975496c', poster: '/_blob/c927d6d9ede84ebc6adffba4921f820d' },
+{ title: 'what my soul needs', cat: 'golden', color: '#E08A4F', best: true, src: '/_blob/2d4e0a54bc4311584e072bb1573d9aae', poster: '/_blob/b84753e5eb2aa5de9b8d921dfe8f9adc' },
+{ title: 'end of august', cat: 'golden', color: '#B5532C', best: false, src: '/_blob/a7843cda757be2e69acd7411509ca81f', poster: '/_blob/fb94095c5db646611c49625292931e3d' },
+{ title: 'tramonto, calabria', cat: 'golden', color: '#9C4523', best: false, src: '/_blob/2a781655e1079d39dfab7130c3d12e80', poster: '/_blob/e0391e32545aa2ed2d7eeab8eb8d2623' },
+{ title: 'por ahí por barcelona', cat: 'everyday', color: '#C9693E', best: true, src: '/_blob/4bc6782b777cc490509bf21ebb34ba14', poster: '/_blob/ce8b15c8522e4c57289057e66bf89c26' },
+{ title: 'it’s all about noticing', cat: 'everyday', color: '#B88A66', best: true, src: '/_blob/de80effba138b122182274b2b1c600b8', poster: '/_blob/3a6accc7140c2dee05c102dc8e63418b' },
+{ title: 'the art of people at the beach', cat: 'everyday', color: '#D9764A', best: true, src: '/_blob/f20f81d771c1cea47d6036a3dd09755a', poster: '/_blob/245d1818726b949cadfccffee0d9a961' },
+{ title: 'just a brunch day', cat: 'everyday', color: '#E9A46E', best: false, src: '/_blob/ebc30eeed2ebfdf3c5a6f6dba78a3c7e', poster: '/_blob/9b777b45bcc42874ca23122e979dd594' },
+{ title: 'the art of looking up', cat: 'everyday', color: '#5A3A2C', best: true, src: '/_blob/46bc498d9fa4b777251cf0f99f2f17fe', poster: '/_blob/4caab62b814cf75715642d109a4d23fa' },
+{ title: 'it’s june again', cat: 'everyday', color: '#8C4A2F', best: true, src: '/_blob/bce52a6ab1f7ca1c56551d5dd94dd884', poster: '/_blob/0b2f96066af77ab403b49dc4ca746419' },
+{ title: 'summer pattern', cat: 'everyday', color: '#D9A27E', best: true, src: '/_blob/8c1d10ccfdf513177bf83f6efaad1006', poster: '/_blob/b49d7c552ef6df443bf1a2924cd97331' },
+{ title: 'the light always finds its way', cat: 'golden', color: '#B5532C', best: true, src: '/_blob/9f5c0b370910fe1fb1962175271e572b', poster: '/_blob/5b8272e6db2bfdb27bd809acd28797b8' }
+].map((r) => ({ ...r, poster: r.poster || '', catLabel: labels[r.cat], hasVideo: !!r.src }));
+const on = 'background: #221A15; color: #F6EFE6; border: 1px solid #221A15;';
+const off = 'background: transparent; color: #221A15; border: 1px solid #CDB9A3;';
+const filters = cats.map((c) => ({ ...c, pressed: c.id === cat ? 'true' : 'false', st: c.id === cat ? on : off, pick: () => { this.resetStrip('reels'); this.setState({ cat: c.id }); } }));
+const shown = (cat === 'all' ? reels.filter((r) => r.best) : reels.filter((r) => r.cat === cat)).filter((r) => r.hasVideo);
+const dest = (this.state && this.state.dest) || null;
+const D = [
+{ id: 'calabria', name: 'calabria', line: 'vita lenta in calabria', color: '#E08A4F', big: true, text: 'Where I spend every summer: the sea, long lunches and the reddest sunsets.', cover: '/_blob/12c76384e3b6c086d1dea9a932a1bdd0',
+reels: [['/_blob/37904bbed0ecf0a143e105d768ccb853', '/_blob/893d56a368119ebda7099eaef7c169dd'], ['/_blob/2d4e0a54bc4311584e072bb1573d9aae', '/_blob/b84753e5eb2aa5de9b8d921dfe8f9adc'], ['/_blob/ebc30eeed2ebfdf3c5a6f6dba78a3c7e', '/_blob/9b777b45bcc42874ca23122e979dd594'], ['/_blob/f20f81d771c1cea47d6036a3dd09755a', '/_blob/245d1818726b949cadfccffee0d9a961']],
+chapterSea: { title: 'summer, slowly', text: 'Coves, boats and the last light of the day.', wide: true, clips: [['/_blob/3b872a7918950ecfa7f2cd4b5fc8d6df', '/_blob/bef83d37a2c79dab8cea1548d6c870b4'], ['/_blob/594fc22b8fcb40cff619210efa285869', '/_blob/5f9abd0018b8be550b6994717faed181'], ['/_blob/c22ec709ea646423951c524b529ceeec', '/_blob/cfac03f114c5349167d322bb0f2e9e9e'], ['/_blob/7b4b14f56306fbf7bfd181fa22d5c739', '/_blob/779775df4e03841193603683bff31c1f'], ['/_blob/4dfa3ab883fa06e307b2c4be53aec2ce', '/_blob/d64902d0ba15b77150517091db6a68e5'], ['/_blob/d0f3db0f812a988985acfba559978aee', '/_blob/a8f18da29df02dc118618b920b0617d0']] },
+chapter: { title: 'la giornata più rossa di agosto', text: 'Making tomato sauce the Calabrian way, from the first wash to the first plate.', clips: [['/_blob/5e76ac0e39302fb4550353091d922344', '/_blob/7ccd48c6930d0fa4e0ccd8d75c471b02'], ['/_blob/596e99801cc4541d38aef21c5f4dae60', '/_blob/301a5aae73cd5c6d880144b6fae38d81'], ['/_blob/d39c161d953b84f3a4dd025a4a7438d6', '/_blob/bd87d7592d3528f90599a9fc08177fea'], ['/_blob/4d25a24261f022990405980a4544cf3f', '/_blob/7c93f9462e2f4d5224987b2beb3ec303'], ['/_blob/454b696be4fce805c47b6d8cbc7d2e04', '/_blob/94dc9f8fdeff951e35091b3aa00be14f'], ['/_blob/18d965ed38a7fb10b0de1372b8a1758f', '/_blob/50af5ccf54084345d349489acc3587b0'], ['/_blob/ce7b5a72af4ea74dc0a57f143082d219', '/_blob/f1032d9c3b7334b61cf020d460bc2b65'], ['/_blob/497faa708c78fae69edf0c9e656f1716', '/_blob/ebeade10bc3a9b2ac0a249079b2d2bab']] },
+land: [['/_blob/517c43ce3279fdc94795946c82b3b114', '/_blob/5ed2597320b174c571c6cfd4753fbd4e'], ['/_blob/30c58450aeaf0f7550c22d456af1f6bb', '/_blob/3aa57b0f540a7b61900a786c96866a9a'], ['/_blob/9c232ccf275aad6ecb1e6f7ff2a538d6', '/_blob/ee9f13f21dae200a7f8d31ca4246561d']] },
+{ id: 'paris', name: 'paris', line: 'vita lenta a parigi', color: '#5A3A2C', text: 'You. Me. Paris.', cover: '/_blob/6c7c11941bd1f30d3106d00da1593c2e', reels: [['/_blob/e8f3af480e9fb5594392947db975496c', '/_blob/c927d6d9ede84ebc6adffba4921f820d'], ['/_blob/67c37baa46c491e89ad854fc035a4cad', '/_blob/1e95279e7bbdd9d085ca5ea5df423a34'], ['/_blob/4ac4cf5ef73a0fea206c6c8fbf2ce28f', '/_blob/92b1943798fe66a466cc0a01613934b4'], ['/_blob/9b72d0af278d6fceabdc162b2b925e80', '/_blob/8835b697b21e902a39408a67b44970ae'], ['/_blob/369f28549af177d36a0536bc538597fa', '/_blob/677e485f751c57a7aedfd41a7b4736af'], ['/_blob/1a856a6923e872a97afea00eec440641', '/_blob/dcdee83a19eed5657d48839e6b2b2c06'], ['/_blob/efe3269d18d8b5254ffd2d385d61d395', '/_blob/cbae80deb5850bf18717a3da27df35c4'], ['/_blob/be79d917592063a58c9635044e4072a5', '/_blob/593ffdedecca39ba0e55e3c2ebe136c4']] },
+{ id: 'marrakech', name: 'marrakech', line: 'vita lenta a marrakech', color: '#B85A34', text: 'meet me in morocco', cover: '/_blob/47c6c2e65d4b32b5602a7f0fd9821a3b', lead: ['/_blob/9cf7764c314f6e124d1d0050b445f083', '/_blob/ab97de7ef72e983b687a34f92e64671c'], reels: [['/_blob/4bfc8a6a9b7bae2a081775cd23461c1a', '/_blob/e0f0ba019aa16b2558963190de63f3c3'], ['/_blob/197feb8cb6a8cb1c6d85b8815c963e35', '/_blob/51005ff4fdc8c8210f055733f60675ac'], ['/_blob/0462367f4a30ae481a3c51854dccde09', '/_blob/c8c3385ad198e4d5bd2d4f624ed4718e']], land: [['/_blob/927fb2dce0f5f940026b1f2814b704b7', '/_blob/aecb334f4fb9c2e3e4052fb00a3711be'], ['/_blob/89245306ff0c8fa91cbd18b71218afbb', '/_blob/d97e1a7a9518e1e6a4ed746f7c5956c8'], ['/_blob/d7ca91a7e94aadf42cfcd79e53456c3f', '/_blob/469cd67f3cc6cead38f9de8d7b524640']] },
+{ id: 'andalusia', name: 'andalusia', line: 'vita lenta in andalusia', color: '#C9693E', text: 'Flamenco red, azulejos and palm trees.', cover: '/_blob/65cbf104845a1d0f99818c9ffe4405ac', reels: [['/_blob/ad2e70680a2c67985924eb91fb2c0ce2', '/_blob/f2eeec290b71fad8cddb5e75069d25f4'], ['/_blob/ff0f77fded784d8af911f07be3ea3c8a', '/_blob/65cbf104845a1d0f99818c9ffe4405ac'], ['/_blob/22f0ad2ac60bdfa4c3b5f7709c2a1ee6', '/_blob/755fd8a7e0fc39bb8e9fe023211b2a62'], ['/_blob/a6d781f58c6aa717e96d11720ec2b537', '/_blob/bfeaa540c5c7b4d0f7fde4c7885a9b32']], land: [['/_blob/64b2532275f9dd15812898522941af7a', '/_blob/d624b5328acf1bd03284f1255fc46063'], ['/_blob/70fa359cec589f76db0b09f2161ec8a5', '/_blob/f27e4288b29035cb3ef35b515e685848']] },
+{ id: 'mallorca', name: 'mallorca', line: 'vita lenta a maiorca', color: '#D9A27E', cover: '/_blob/e43c3ee5e935aa23f0fb7006e805f01e', text: 'Calas, white houses and long golden hours.', blocks: [{ grid: 'chapter-grid-wide', ratio: '16 / 9', clips: [['/_blob/8c661c4f8198bbc00db89ad411a200d5', '/_blob/5fdcfa7d150ed7429c97d9d2e420b42e'], ['/_blob/cbfa469627f194febc1e593e95522727', '/_blob/b62673d9c5f233a9a7e77cd0b91b27a6'], ['/_blob/62ee29377ab4be6b9940137885e3364d', '/_blob/5a58028b9a7d4ee75bc0077ca231e401'], ['/_blob/d862830eb573e16b51d17da7245b7147', '/_blob/4f6d165215a043cd387575913f6ea823'], ['/_blob/c5a1e0be036007d403094937d7ce9071', '/_blob/c38925988f20b60be861441fda87f2d3'], ['/_blob/230de416adafdc33356b299ea6c825f0', '/_blob/16b7dd4e395448658ad5e48670004ebc']] }] },
+{ id: 'liguria', name: 'somewhere in northern italy', line: 'vita lenta nel nord d\'italia', color: '#8C4A2F', full: true, text: 'Lakes, canals and the sea, slowly.', cover: '/_blob/0421704a711b8f7e9cdb692cfc29c139',
+blocks: [
+{ grid: 'grid-2', ratio: '16 / 9', clips: [['/_blob/5ac13b4a1b0c9a959d96ca8d1830273c', '/_blob/4a96717a69c11bf9d8561aa65ae952b8'], ['/_blob/b00237e971064a9ccf7732a98f92c2af', '/_blob/aeabaae8e2f388c0159532c51bf37944']] },
+{ grid: 'grid-3', ratio: '3 / 4', clips: [['/_blob/b6cf38949fd239125aacd7e9f1d6014f', '/_blob/bc95a37e8bb6fb19a4bb6dd92158672d'], ['/_blob/3c68c7b1b74bd19d7bcb744285fbe11b', '/_blob/8c2356e7bab556500ecb6051ef29a6b6'], ['/_blob/ad84fc2ce0d4ba9cd869787020fab034', '/_blob/36330049d7ae3918a4553657335e0699']] },
+{ grid: 'grid-2', ratio: '16 / 9', clips: [['/_blob/695cbb3ff6bed3c0f7b82fbe84785932', '/_blob/7a87ce2467050ccab74a767cc8f9c75f'], ['/_blob/888d7946309ca7149248d50ef166853c', '/_blob/daaf6ff8e144ebf2de306df528d73b0f']] },
+{ grid: 'grid-3', ratio: '3 / 4', clips: [['/_blob/f200167893d6ee0d1b8a5a1d0c2230c3', '/_blob/d355e34bf16581c702175c7eebd805a1'], ['/_blob/7a880e8455d8e1ae4e0bbb8151f9cea1', '/_blob/4bdc43d1eb4582dd01c90e91e1b8cc72'], ['/_blob/b6418d3dfb0af3e2053055c77a651f44', '/_blob/c7820c3c9b5fd05d011fa18631807ff0']] }
+] }
+].map((d) => ({ ...d, text: d.text || '', cover: d.cover || '', coverVid: ({ paris: '/_blob/efe3269d18d8b5254ffd2d385d61d395', marrakech: '/_blob/185c5c9592e61e34dc1a7e059c00c237', andalusia: '/_blob/ff0f77fded784d8af911f07be3ea3c8a', mallorca: '/_blob/8c661c4f8198bbc00db89ad411a200d5', liguria: '/_blob/5ac13b4a1b0c9a959d96ca8d1830273c' })[d.id] || '', coverPoster: ({ paris: '/_blob/cbae80deb5850bf18717a3da27df35c4', marrakech: '/_blob/c5cef79430fab0fe165b2f0accb0a930', liguria: '/_blob/4a96717a69c11bf9d8561aa65ae952b8' })[d.id] || d.cover || '', hasCover: !!d.cover, reels: d.reels || [], land: d.land || [] }));
+const dests = D.map((d) => ({
+...d,
+hasVid: !!d.coverVid,
+noVid: !d.coverVid,
+cls: 'dest' + (d.big ? ' dest-big' : d.full ? ' dest-full' : d.wide ? ' dest-wide' : ''),
+open: dest === d.id ? 'true' : 'false',
+ring: dest === d.id ? 'box-shadow: 0 0 0 3px #221A15;' : '',
+pick: () => {
+const next = dest === d.id ? null : d.id;
+this.setState({ dest: next });
+if (next) setTimeout(() => { const el = document.getElementById('dest-story'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+}
+}));
+const cur = D.find((d) => d.id === dest);
+const tint = cur ? cur.color : '#C9693E';
+const fill = (media, colors) => colors.map((color, i) => media[i] ? { color, src: media[i][0], poster: media[i][1], hasVideo: true } : { color, src: '', poster: '', hasVideo: false });
+const storyReels = cur && !cur.reels.length && (cur.land.length || cur.chapter || cur.chapterSea || cur.blocks) ? [] : fill(cur ? cur.reels : [], Array.from({ length: cur && cur.reels.length ? cur.reels.length : 4 }, (_, i) => [tint, '#B85A34', '#7A3B2A', '#E9A46E'][i % 4]));
+const landColors = Array.from({ length: cur && cur.land.length ? cur.land.length : 2 }, (_, i) => ['#D9A27E', tint, '#C9693E'][i % 3]);
+const storyPhotos = cur && !cur.land.length && (cur.chapter || cur.chapterSea || cur.blocks || cur.reels.length) ? [] : fill(cur ? cur.land : [], landColors);
+const chapters = (cur ? (cur.blocks ? cur.blocks.map((b) => ({ ...b, title: '', text: '', flat: true })) : cur.seaFirst ? [cur.chapterSea, cur.chapter] : [cur.chapter, cur.chapterSea]) : []).filter(Boolean).map((ch) => ({
+title: ch.title,
+text: ch.text,
+cls: ch.flat ? 'chapter-flat' : 'chapter',
+grid: ch.grid || (ch.wide ? 'chapter-grid-wide' : 'chapter-grid'),
+items: ch.clips.map((c) => ({ src: c[0], poster: c[1] || '', isVideo: !!c[1], isImg: !c[1], ratio: ch.ratio || (ch.wide ? '16 / 9' : '3 / 4') }))
+}));
+const slide = (id, dir) => () => { const el = document.querySelector('[data-cc="' + id + '"]'); if (el) el.scrollBy({ left: dir * el.clientWidth, behavior: 'smooth' }); };
+const carousels = [
+{ id: 'estate', title: 'cose che mi porto dietro', slides: ['a5ea48716e98b3b00076cbfc0fd339eb', '18bbd3f2fc566cb224cd327121347e80', 'f1da560274e0a3d45575b7eb395bfa5b', '8268b1f1b501e4fe4ee860b6fe9fa7c2', 'da2ec41076cf6ff65fc88864884e5243', '207826d4abc31226d006a6fe47f63cff', '578018f0572a406d05b3c866b81fb681', '095eb36f38e98469537461d134312abf', 'af9bf4b717ac357656dc2cef128e6526', '87baea544517c24d454a2dab0eea2f79', 'dc5f4d1e8859871e4200af202a527913', '85a0f5ae580116c7b93935a8f11e0339', '362b4b6c8d1a26692204ec4653dfb650'] },
+{ id: 'frammenti', title: 'colori che sanno di estate', slides: ['8e1db681a871881f2554828305c60c47', ['fe456f3b7ca84ea0acf9c40c558f8939', 'f0e3143ccc26854d7503602682a44f6f'], ['77fbf42dc35175939f5300902dba4aee', 'a6bfe9b9922a9bd4949c4207cd130277'], '3b4e679582990a8edc3801cd40398e36', ['7a16a8272128e6d891fc3ee42996ad0c', '7879628f341394c5290a33b1516b0e36'], 'b69fcb0d0c9d0e9dd3a2115a33c472df', ['270728e95b96738d754c22576aa2bd62', '6917fef19c5670b9b35c06ab923418f2'], 'e48c9d257939ed06539ac61b369f1225', ['0165b907d16f7ae7a3511f96f326a419', 'd5737c0c258338698775f52720a69a3c'], ['6bf06d17a1fc7d15b0792a6ca6a8b40f', '0ac877d3cdb8c4b2e7ae096fb383e88f']] },
+{ id: 'colori', title: 'collezionando colori', slides: ['0ce910878004856e67242d53db6878f9', '8fa57578823dc207996322f4517523aa', '65dc9015b57a7f1afbd5fd687df766f7', '66e89e64b0892733282fa2c585a67474', '7f26f1a3d78515d99e8a7e506bb4d50e', '1c41ab5f4a6d9994b434dacb585b1894'] }
+].map((k) => ({ ...k, slides: k.slides.map((b) => (Array.isArray(b) ? { src: '/_blob/' + b[0], poster: '/_blob/' + b[1], isVid: true, isImg: false } : { src: '/_blob/' + b, poster: '', isVid: false, isImg: true })), prev: slide(k.id, -1), next: slide(k.id, 1) }));
+return { carousels, reelsCls: 'story-reels' + (storyReels.length === 3 ? ' three' : ''), hasLead: !!(cur && cur.lead), lead: cur && cur.lead ? { src: cur.lead[0], poster: cur.lead[1] } : { src: '', poster: '' }, chapters, dests, hasDest: !!cur, cur: cur || { name: '', text: '' }, storyReels, storyPhotos, closeDest: () => this.setState({ dest: null }), heroD, heroM, hasHeroD: !!heroD, hasHeroM: !!heroM, filters, loop: this.repeat(shown), hold: () => { this.userAt = Date.now(); } };
+}
+repeat(list) {
+let out = list.slice();
+while (out.length < 8 && list.length) out = out.concat(list);
+return out.concat(out);
+}
+resetStrip(name) {
+this.pos = this.pos || {};
+this.pos[name] = 0;
+const el = document.querySelector('[data-strip="' + name + '"]');
+if (el) el.scrollLeft = 0;
+}
+componentDidMount() {
+this.onAnchor = (e) => {
+const a = e.target && e.target.closest && e.target.closest('a[href^="#"]');
+if (!a) return;
+const el = document.getElementById(a.getAttribute('href').slice(1));
+if (!el) return;
+e.preventDefault();
+el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+clearTimeout(this.anchorT);
+this.anchorT = setTimeout(() => el.scrollIntoView({ block: 'start' }), 900);
+};
+document.addEventListener('click', this.onAnchor, true);
+this.pos = this.pos || {};
+this.userAt = 0;
+const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const speed = 0.5;
+const tick = () => {
+const now = Date.now();
+document.querySelectorAll('[data-strip]').forEach((el) => {
+const name = el.getAttribute('data-strip');
+const half = el.scrollWidth / 2;
+if (half <= el.clientWidth) return;
+if (reduce || now - this.userAt < 900) {
+this.pos[name] = el.scrollLeft;
+} else {
+this.pos[name] = (this.pos[name] ?? el.scrollLeft) + speed;
+}
+if (this.pos[name] >= half) this.pos[name] -= half;
+if (this.pos[name] < 1 && now - this.userAt < 900) this.pos[name] += half;
+if (Math.abs(el.scrollLeft - this.pos[name]) >= 1 || !(reduce || now - this.userAt < 900)) el.scrollLeft = this.pos[name];
+});
+this.raf = requestAnimationFrame(tick);
+};
+this.raf = requestAnimationFrame(tick);
+}
+}
+
+window.Component = Component;
+window.__dcStart();
+</script>
+</body>
+</html>
